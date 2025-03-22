@@ -1,5 +1,5 @@
 ﻿const AddStudent = async (student) => {
-    try {
+    try { 
         const result = await AjaxPOST('/Student/AddStudent', student);
         if (result.success) {
             alert('Student added successfully');
@@ -13,7 +13,7 @@
     }
 };
 
-$(document).ready(function () => {
+$(document).ready(function () {
     $('#addStudentForm').on('submit', function (e) {
         e.preventDefault();
         const student = {
@@ -25,6 +25,7 @@ $(document).ready(function () => {
         AddStudent(student);
     }); 
 });
+
 const getStudentById = async (id) => {
     try {
         return await AjaxGET(`/Student/GetStudentById/${id}`);
@@ -34,3 +35,4 @@ const getStudentById = async (id) => {
         console.error('Error getting student:', e);
         alert("An error occured while getting the student.");
     }
+};
