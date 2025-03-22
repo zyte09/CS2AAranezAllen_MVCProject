@@ -1,7 +1,6 @@
 ﻿using CS2AAranezAllen_MVCProject.BusLogic.Model;
 using CS2AAranezAllen_MVCProject.BusLogic.Repository;
 
-
 namespace CS2AAranezAllen_MVCProject.BusLogic.Service
 {
     public class StudentService 
@@ -13,5 +12,11 @@ namespace CS2AAranezAllen_MVCProject.BusLogic.Service
             return _studentRepository.GetAll();
 
         }
+
+        public bool Add(tblStudent student)
+        {
+            return _studentRepository.Add(student);
+        }
+
     }
 }
